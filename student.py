@@ -26,25 +26,14 @@ def student_records():
                 students[name] = {'age': age, 'grade': grade}
                 print(f"Student: '{name}' updated")
 
-        elif choice == '3':
-            #def calculate_average(grade):
-                #return sum(grade) / len(grade)
-            
+        elif choice == '3':           
             all_grades = []
             for name, details in students.items():
                 all_grades.append(int(details['grade']))
             average = sum(all_grades) / len(all_grades)
             print(f"Average Grade: {average:.2f}")
             
-            #for i in students:
-                #name, grade = students
-                #average = sum(grade) / len(grade)
-                #print(f"{name}: Average Grade: {average:.2f}")
-
-                #for student, grades in students:
-                #average = calculate_average(grades)
-                #print(f"{student}: Average Grade = {average:.2f}")
-
+            
         elif choice == '4':
             if students:
                 print("\nStudent: ")
@@ -52,6 +41,12 @@ def student_records():
                     print(f"Name: {name}, Age: {info['age']}, Grade: {info['grade']}")
             else:
                 print("No information available.")
+                break
+
+        else:
+            print("Invalid. Choose a valid option.")
+
             
 
 student_records()
+ 
